@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="MATCHDAY '26 — FIFA World Cup match tracker">
+  <title>MATCHDAY '26</title>
+  <desc>Animated banner for the FIFA World Cup 2026 match tracker. Stadium palette: Pitch Night navy, Jersey Red, Turf Green, Scoreboard Amber.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0B1020"/>
+      <stop offset="55%" stop-color="#0E1530"/>
+      <stop offset="100%" stop-color="#111A33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FFB703" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#E63946" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0B1020" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#F1F5F9"/>
+      <stop offset="70%"  stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#FFB703"/>
+    </linearGradient>
+    <pattern id="pitch" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 0H80V80" fill="none" stroke="#1B2547" stroke-width="1"/>
+    </pattern>
+    <clipPath id="tagClip">
+      <rect x="0" y="0" width="0" height="40">
+        <animate attributeName="width" values="0;560;560;0" keyTimes="0;0.35;0.85;1" dur="6s" begin="0.6s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <style><![CDATA[
+      .meta    { font: 700 14px/1 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: .24em; fill: #94A3B8; }
+      .live    { font: 800 14px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .26em; fill: #F1F5F9; }
+      .word    { font: 900 120px/1 "Arial Black", Impact, system-ui, sans-serif; letter-spacing: .015em; fill: url(#wordmark); }
+      .year    { font: 900 168px/1 "Arial Black", Impact, system-ui, sans-serif; letter-spacing: -.02em; fill: #FFB703; }
+      .yearOut { font: 900 168px/1 "Arial Black", Impact, system-ui, sans-serif; letter-spacing: -.02em; fill: none; stroke: #E63946; stroke-width: 2; opacity: .55; }
+      .tag     { font: 500 22px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #CBD5E1; }
+      .pillTxt { font: 900 22px/1 "Arial Black", Impact, system-ui, sans-serif; fill: #0B1020; letter-spacing: .08em; }
+      .foot    { font: 700 13px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .22em; fill: #64748B; }
+
+      .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+      .l1 { animation-delay: .05s } .l2 { animation-delay: .12s } .l3 { animation-delay: .19s }
+      .l4 { animation-delay: .26s } .l5 { animation-delay: .33s } .l6 { animation-delay: .40s }
+      .l7 { animation-delay: .47s } .l8 { animation-delay: .54s }
+      .yearIn { opacity: 0; transform: translateY(40px) scale(.9); transform-origin: center; animation: rise 1s .7s cubic-bezier(.2,.9,.2,1.2) forwards; }
+
+      .draw   { stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 1.1s 1.1s cubic-bezier(.2,.7,.2,1) forwards; }
+      .blink  { animation: blink 1.4s ease-in-out infinite; transform-origin: center; }
+      .drift  { animation: drift 18s linear infinite; }
+      .pill   { animation: pillPop .6s 1.6s cubic-bezier(.2,.9,.2,1.2) backwards; }
+      .cursor { animation: cursor 1s steps(1) infinite; }
+
+      @keyframes rise   { to { opacity: 1; transform: translateY(0) scale(1); } }
+      @keyframes draw   { to { stroke-dashoffset: 0; } }
+      @keyframes blink  { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.78); } }
+      @keyframes drift  { from { transform: translateX(0); } to { transform: translateX(-80px); } }
+      @keyframes pillPop{ from { opacity: 0; transform: translateY(8px) scale(.92); } to { opacity: 1; transform: none; } }
+      @keyframes cursor { 50% { opacity: 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .rise, .yearIn, .draw, .blink, .drift, .pill, .cursor { animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <g class="drift" opacity="0.55"><rect x="-80" y="0" width="1440" height="360" fill="url(#pitch)"/></g>
+  <ellipse cx="640" cy="180" rx="720" ry="240" fill="url(#glow)"/>
+  <circle cx="1160" cy="-40" r="220" fill="none" stroke="#1B2547" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="120" cy="400" r="220" fill="none" stroke="#1B2547" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Top meta row -->
+  <g transform="translate(80,58)">
+    <circle cx="8" cy="-4" r="7" fill="#E63946" class="blink"/>
+    <text x="26" y="0" class="live">LIVE</text>
+    <text x="92" y="0" class="meta">GROUP STAGE  ·  KNOCKOUTS  ·  FINAL</text>
+  </g>
+
+  <!-- Oversized '26 sits behind the wordmark, intentionally overlapping -->
+  <g transform="translate(880,220)">
+    <text class="yearOut yearIn" x="0" y="0">'26</text>
+    <text class="year yearIn"    x="0" y="0">'26</text>
+  </g>
+
+  <!-- Wordmark MATCHDAY -->
+  <g transform="translate(80,200)">
+    <text class="word">
+      <tspan class="rise l1">M</tspan><tspan class="rise l2" dx="2">A</tspan><tspan class="rise l3" dx="2">T</tspan><tspan class="rise l4" dx="2">C</tspan><tspan class="rise l5" dx="2">H</tspan><tspan class="rise l6" dx="2">D</tspan><tspan class="rise l7" dx="2">A</tspan><tspan class="rise l8" dx="2">Y</tspan>
+    </text>
+    <path class="draw" d="M0 22 L520 22" stroke="#FFB703" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Tagline (rotating, typed) -->
+  <g transform="translate(80,272)">
+    <text x="0" y="0" class="tag" fill="#FFB703">&gt;&#160;</text>
+    <g clip-path="url(#tagClip)" transform="translate(28,-22)">
+      <text x="0" y="22" class="tag">
+        <tspan>track every match. local time. zero noise.</tspan>
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.32;0.34;1" dur="18s" repeatCount="indefinite"/>
+      </text>
+      <text x="0" y="22" class="tag" opacity="0">
+        <tspan>48 teams. 104 matches. one tracker.</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.34;0.66;0.67;1" dur="18s" repeatCount="indefinite"/>
+      </text>
+      <text x="0" y="22" class="tag" opacity="0">
+        <tspan>mark watched. never miss a kickoff.</tspan>
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.66;0.67;1" dur="18s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <text x="600" y="0" class="tag cursor" fill="#FFB703">_</text>
+  </g>
+
+  <!-- Scoreboard pill (jersey numbers) -->
+  <g class="pill" transform="translate(1060,292)">
+    <rect x="0" y="0" rx="22" ry="22" width="140" height="44" fill="#FFB703"/>
+    <text x="70" y="29" text-anchor="middle" class="pillTxt">
+      <tspan>#09</tspan>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.23;0.25;1" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="70" y="29" text-anchor="middle" class="pillTxt" opacity="0">
+      <tspan>#10</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.24;0.25;0.48;0.50;1" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="70" y="29" text-anchor="middle" class="pillTxt" opacity="0">
+      <tspan>#07</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.49;0.50;0.73;0.75;1" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="70" y="29" text-anchor="middle" class="pillTxt" opacity="0">
+      <tspan>#26</tspan>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.74;0.75;1" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Bottom rule + foot meta -->
+  <line x1="80" y1="324" x2="1200" y2="324" stroke="#1B2547" stroke-width="1"/>
+  <text x="80"  y="346" class="foot">USA · CANADA · MEXICO  —  JUN 11 → JUL 19</text>
+  <text x="1200" y="346" class="foot" text-anchor="end">104 MATCHES  ·  48 TEAMS</text>
+</svg>

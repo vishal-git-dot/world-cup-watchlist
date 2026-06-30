@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5C646"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="s" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E5E7EB"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+  </defs>
+  <!-- Trophy body -->
+  <path d="M9 6 h14 v3 h-2 c0 4-2 8-5 10v2h4v3h-8v-3h4v-2c-3-2-5-6-5-10h-2z" fill="url(#g)" stroke="#92400E" stroke-width="0.5"/>
+  <!-- Trophy handles -->
+  <path d="M9 7 c-4 0-5 4-4 7 1 2 3 3 4 3" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M23 7 c4 0 5 4 4 7-1 2-3 3-4 3" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Base -->
+  <rect x="10" y="22" width="12" height="3" rx="1" fill="#78350F"/>
+  <rect x="11" y="24" width="10" height="2" rx="0.5" fill="#92400E"/>
+  <!-- World ball detail -->
+  <circle cx="16" cy="12" r="2.5" fill="#1E3A8A" opacity="0.25"/>
+</svg>
