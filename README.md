@@ -6,7 +6,7 @@
 
 <div align="center">
 
-<a href="" target="_blank" rel="noopener noreferrer">
+<a href="https://world-cup-watchlist.netlify.app/" target="_blank" rel="noopener noreferrer">
   <img src="https://img.shields.io/badge/%F0%9F%9F%A2%20LIVE%20%E2%80%94%20Launch%20Matchday%202026-Open%20app-FFB703?style=for-the-badge&labelColor=0B1020&logo=vercel&logoColor=E63946" alt="Open Matchday 2026 live app" />
 </a>
 
